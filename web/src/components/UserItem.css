@@ -32,3 +32,11 @@
 	background-color: #008cba;
 	color: white;
 }
+
+a {
+	color: black !important;
+	text-decoration: none !important;
+}
+a:hover {
+	color: white !important;
+}
