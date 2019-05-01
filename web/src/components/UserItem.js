@@ -1,27 +1,11 @@
 import React, { Component } from 'react';
 
 import { ListGroup, Row, Col } from 'react-bootstrap';
-import { Switch, Redirect } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import './UserItem.css';
 
 class User extends Component {
-	goToDetails = event => {
-		event.preventDefault();
-		alert('detalhe');
-
-		return;
-		// return (
-		// 	<Switch>
-		// 		<Redirect
-		// 			to={{
-		// 				pathname: '/user'
-		// 			}}
-		// 		/>
-		// 	</Switch>
-		// );
-	};
-
 	render() {
 		const { user } = this.props;
 		return (
@@ -37,8 +21,15 @@ class User extends Component {
 					</Col>
 					<Col xs={4}>
 						<div className="users-list__see">
-							<button onClick={this.goToDetails} className="button">
-								See User Details
+							<button className="button">
+								<Link
+									to={{
+										pathname: `/user/${user.id}`,
+										params: { user: user }
+									}}
+								>
+									See User Details
+								</Link>
 							</button>
 						</div>
 					</Col>
@@ -48,4 +39,4 @@ class User extends Component {
 	}
 }
 
-export default User;
+export default withRouter(User);

@@ -4,6 +4,8 @@ import './UsersList.css';
 
 import { ListGroup, Container, Row, Col } from 'react-bootstrap';
 
+import { withRouter } from 'react-router-dom';
+
 import UserItem from './UserItem';
 
 class UsersList extends Component {
@@ -30,4 +32,4 @@ class UsersList extends Component {
 	}
 }
 
-export default UsersList;
+export default withRouter(UsersList);

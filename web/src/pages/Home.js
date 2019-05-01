@@ -4,6 +4,8 @@ import './Home.css';
 import api from '../services/api';
 import UsersList from '../components/UsersList';
 
+import { withRouter } from 'react-router-dom';
+
 class Home extends Component {
 	constructor(props) {
 		super(props);
@@ -34,4 +36,4 @@ class Home extends Component {
 	}
 }
 
-export default Home;
+export default withRouter(Home);

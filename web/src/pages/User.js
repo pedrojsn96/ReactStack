@@ -6,6 +6,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 class User extends Component {
 	render() {
+		const { location } = this.props;
+		const { params } = location;
+		const { user } = params;
+
 		return (
 			<div className="App">
 				<Container>
@@ -17,9 +21,9 @@ class User extends Component {
 					<Row>
 						<Col xs={12}>
 							<div>
-								<p className="users-list__name">Nome</p>
+								<p className="users-list__name">{user.name}</p>
 								<p className="users-list__company-name">
-									<i>Company</i>
+									<i>{user.company.name}</i>
 								</p>
 							</div>
 						</Col>
