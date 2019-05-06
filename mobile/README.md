@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <!-- show case/gif section -->
 <p align="center">
-    <img alt="web.gif" height="450" src="https://media.giphy.com/media/KDsssjMIZINIxvUtDV/giphy.gif" />
+    <img alt="web.gif" height="450" src="https://media.giphy.com/media/VbtPXtM1Z6dkx7iFbf/giphy.gif" />
 </p>
 <!-- show case/gif section END -->
 
