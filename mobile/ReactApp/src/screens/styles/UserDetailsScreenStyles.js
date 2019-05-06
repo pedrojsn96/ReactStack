@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 export default StyleSheet.create({
 	container: {
@@ -52,5 +54,12 @@ export default StyleSheet.create({
 	companyName: {
 		fontSize: 14,
 		fontWeight: '300'
+	},
+	//map
+	wrapperMap: {
+		marginTop: 8,
+		width: width,
+		height: 130
+		// backgroundColor: 'red'
 	}
 });
