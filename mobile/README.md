@@ -25,13 +25,14 @@ In the project directory, you can run:
 
 ### Run npm install
 
-- `cd web`
+- `cd mobile && cd ReactApp`
 - `npm install`
 
-### `npm start`
+### Linking Libraries
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `react-native link`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Running this application
+
+- `react-native run-ios`
+- `react-native run-android`
