@@ -9,9 +9,14 @@ import {
 
 import api from '../services/api';
 
+import styles from './styles/HomeScreenStyles';
+
 class HomeScreen extends Component {
 	static navigationOptions = {
-		title: 'Home Screen'
+		title: 'Home Screen',
+		headerStyle: {
+			backgroundColor: '#cecece'
+		}
 	};
 
 	constructor(props) {
@@ -39,12 +44,13 @@ class HomeScreen extends Component {
 		const { item } = element;
 		const { navigation } = this.props;
 		return (
-			<View>
+			<View style={styles.userContent}>
 				<TouchableOpacity
 					onPress={() => navigation.navigate('UserDetails', item)}
 				>
-					<Text>{item.name}</Text>
-					<Text>{item.company.name}</Text>
+					<Text style={styles.userName}>{item.name}</Text>
+					<Text style={styles.companyName}>{item.company.name}</Text>
+					<View style={styles.separator} />
 				</TouchableOpacity>
 			</View>
 		);
@@ -55,13 +61,13 @@ class HomeScreen extends Component {
 
 		if (loading || users === []) {
 			return (
-				<View>
+				<View style={{ marginTop: 15 }}>
 					<ActivityIndicator />
 				</View>
 			);
 		}
 		return (
-			<View>
+			<View style={styles.container}>
 				<FlatList
 					data={users}
 					renderItem={(item, index) => this.renderItem(item, index)}
