@@ -55,11 +55,9 @@ export default StyleSheet.create({
 		fontSize: 14,
 		fontWeight: '300'
 	},
-	//map
 	wrapperMap: {
 		marginTop: 8,
 		width: width,
-		height: 130
-		// backgroundColor: 'red'
+		height: 250
 	}
 });
